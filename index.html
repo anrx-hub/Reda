@@ -5,14 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ضرب رضا نعجة</title>
     <style>
-        body { text-align: center; font-family: sans-serif; background-color: #f0f0f0; }
-        #reda-image { 
-            width: 200px; /* الحجم الابتدائي */
-            margin: 50px auto; 
-            cursor: pointer;
-            transition: transform 0.1s;
-        }
-    </style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: white;
+        user-select: none;
+    }
+
+    h1 { margin-bottom: 10px; font-size: 2rem; text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+
+    #reda-image {
+        width: 250px;
+        filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+        transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+    }
+
+    #reda-image:active {
+        transform: scale(0.9);
+    }
+
+    #score {
+        font-size: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin-top: 20px;
+    }
+</style>
+
 </head>
 <body>
 
