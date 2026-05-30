@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ضرب رضا نعجة</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; background-color: #f0f0f0; }
+        #belly { 
+            width: 100px; 
+            height: 100px; 
+            background-color: #ffcc99; 
+            border-radius: 50%; 
+            margin: 50px auto; 
+            transition: transform 0.1s;
+            cursor: pointer;
+            border: 5px solid #d2691e;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>لعبة: ضرب رضا نعجة</h1>
+    <p>اضغط على البطن لزيادة حجمه!</p>
+    
+    <div id="belly" onclick="growBelly()"></div>
+    
+    <h2 id="score">نقرات: 0</h2>
+
+    <script>
+        let size = 100;
+        let clicks = 0;
+
+        function growBelly() {
+            clicks++;
+            size += 5; // زيادة الحجم مع كل ضغطة
+            let belly = document.getElementById('belly');
+            belly.style.width = size + "px";
+            belly.style.height = size + "px";
+            document.getElementById('score').innerText = "نقرات: " + clicks;
+            
+            if (size > 500) {
+                alert("انفجر البطن! لقد فزت.");
+                size = 100; // إعادة تعيين
+                clicks = 0;
+            }
+        }
+    </script>
+</body>
+</html>
