@@ -6,6 +6,11 @@
     <title>ضرب رضا نعجة</title>
     <style>
     body {
+        /* منع التكبير والتحكم في سلوك اللمس */
+    touch-action: manipulation; /* يمنع التأخير ويمنع التكبير عند الضغط السريع */
+    -webkit-tap-highlight-color: transparent; /* يمنع ظهور لون رمادي عند الضغط */
+    user-select: none;
+    -webkit-user-select: none;
         margin: 0;
         padding: 0;
         display: flex;
